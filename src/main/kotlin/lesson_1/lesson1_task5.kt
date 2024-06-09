@@ -1,22 +1,15 @@
 package lesson_1
 
-fun getIntSetTime(num: Int): String {
-    val time: String = num.toString()
-    return when (time.length) {
-        1 -> "0$time"
-        2 -> time
-        else -> "Incorrect num"
-    }
-}
+const val TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS: Int = 6480
+const val SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR: Int = 60
+
 
 fun main() {
-    var seconds: Int = 6480
+    val seconds: Int = TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS % SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR
+    val minutes: Int =
+        TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS / SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR % SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR
+    val hours: Int =
+        TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS / SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR / SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR
 
-    var minutes: Int = seconds / 60
-    seconds %= 60
-
-    val hours: Int = minutes / 60
-    minutes %= 60
-
-    println("${getIntSetTime(hours)}:${getIntSetTime(minutes)}:${getIntSetTime(seconds)}")
+    println("%02d:%02d:%02d".format(hours, minutes, seconds))
 }
