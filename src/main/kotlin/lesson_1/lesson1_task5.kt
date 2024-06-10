@@ -1,15 +1,16 @@
 package lesson_1
 
-const val TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS: Int = 6480
-const val SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR: Int = 60
+const val SECONDS_PER_MINUTE: Int = 60
+const val MINUTES_PER_HOUR: Int = 60
 
 
 fun main() {
-    val seconds: Int = TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS % SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR
+    val timeInSpaceSec: Int = 6480
+    val seconds: Int = timeInSpaceSec % SECONDS_PER_MINUTE
     val minutes: Int =
-        TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS / SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR % SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR
+        timeInSpaceSec / SECONDS_PER_MINUTE % MINUTES_PER_HOUR
     val hours: Int =
-        TOTAL_TIME_SPENT_IN_SPACE_IN_SECONDS / SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR / SECONDS_IN_MINUTE_AND_MINUTES_IN_HOUR
+        timeInSpaceSec / SECONDS_PER_MINUTE / MINUTES_PER_HOUR
 
     println("%02d:%02d:%02d".format(hours, minutes, seconds))
 }
