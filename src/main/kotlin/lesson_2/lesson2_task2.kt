@@ -7,7 +7,7 @@ fun main() {
     val traineesSalary: Int = 20_000
 
     val totalSalaryOfStaffersCosts: Int = totalStaffers * staffersSalary
-    val totalSalaryOfAllWorkersCosts: Int = (totalSalaryOfStaffersCosts) + (totalTrainees * traineesSalary)
+    val totalSalaryOfAllWorkersCosts: Int = totalSalaryOfStaffersCosts + totalTrainees * traineesSalary
     val averageSalaryInCompany: Int = totalSalaryOfAllWorkersCosts / (totalStaffers + totalTrainees)
 
     print(
