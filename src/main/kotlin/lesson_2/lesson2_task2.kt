@@ -10,9 +10,7 @@ fun main() {
     val totalSalaryOfAllWorkersCosts: Int = totalSalaryOfStaffersCosts + totalTrainees * traineesSalary
     val averageSalaryInCompany: Int = totalSalaryOfAllWorkersCosts / (totalStaffers + totalTrainees)
 
-    print(
-        "Расходы на выплату зарплаты постоянных сотрудников: $totalSalaryOfStaffersCosts\n" +
-                "Общие расходы по ЗП после прихода стажеров: $totalSalaryOfAllWorkersCosts\n" +
-                "Средняя ЗП одного сотрудника после устройства стажеров: $averageSalaryInCompany"
-    )
+    print("Расходы на выплату зарплаты постоянных сотрудников: $totalSalaryOfStaffersCosts\n" +
+            "Общие расходы по ЗП после прихода стажеров: $totalSalaryOfAllWorkersCosts\n" +
+            "Среднее ЗП одного сотрудника после устройства стажеров: $averageSalaryInCompany")
 }
