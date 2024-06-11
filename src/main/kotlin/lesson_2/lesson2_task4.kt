@@ -5,8 +5,7 @@ fun percent(value: Int): Double = value / 100.0
 fun main() {
     val crystalOre: Int = 7
     val ironOre: Int = 11
-    val materialExtractionBuff: Int =
-        20 // в абстрактной игре значение баффа может меняться, и путаница с записью % может вызывать ошибки
+    val materialExtractionBuff: Int = 20
 
     print(
         "Кристаллическая руда(бонус): ${(crystalOre * percent(materialExtractionBuff)).toInt()}\n" +
