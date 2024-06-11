@@ -9,7 +9,7 @@ fun main() {
 
     print(
         "Кристаллическая руда(бонус): ${(crystalOre * percent(materialExtractionBuff)).toInt()}\n" +
-                "Железная руда(бонус): ${(ironOre * percent(materialExtractionBuff)).toInt()}"
+        "Железная руда(бонус): ${(ironOre * percent(materialExtractionBuff)).toInt()}"
     )
 
 }
