@@ -3,7 +3,7 @@ package lesson_4
 const val SEATS_IN_CAFE = 13
 
 fun main() {
-    val orderSeatsToday: Int = 13
+    val orderSeatsToday: Int = SEATS_IN_CAFE
     val orderSeatsTomorrow: Int = SEATS_IN_CAFE - 4
 
     print(
