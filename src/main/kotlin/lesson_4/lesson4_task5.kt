@@ -1,13 +1,17 @@
 package lesson_4
 
-fun canShipGoToTravel(isShipNotDamaged: Boolean, crewNumber: Int, numberBoxesProvisions: Int, isWeatherGood: Boolean): Boolean {
-    val optimalCrewNumber: Boolean = crewNumber in (55 until 70)
-    val perfectCrewNumber: Boolean = crewNumber == 70
-    val optimalNumberBoxesProvisions: Boolean = numberBoxesProvisions > 50
-    val perfectNumberBoxesProvisions: Boolean = numberBoxesProvisions >= 50
+const val OPTIMAL_CREW_NUMBER = 70
+const val MINIMAL_CREW_NUMBER = 55
+const val OPTIMAL_NUMBER_BOXES_PROVISIONS = 50
 
-    return (isShipNotDamaged && optimalCrewNumber && optimalNumberBoxesProvisions) ||
-            (perfectCrewNumber && perfectNumberBoxesProvisions && isWeatherGood)
+fun canShipGoToTravel(isShipNotDamaged: Boolean, crewNumber: Int, numberBoxesProvisions: Int, isWeatherGood: Boolean): Boolean {
+    val isOptimalCrewNumber: Boolean = crewNumber in (MINIMAL_CREW_NUMBER until OPTIMAL_CREW_NUMBER)
+    val isPerfectCrewNumber: Boolean = crewNumber == OPTIMAL_CREW_NUMBER
+    val isOptimalNumberBoxesProvisions: Boolean = numberBoxesProvisions > OPTIMAL_NUMBER_BOXES_PROVISIONS
+    val isPerfectNumberBoxesProvisions: Boolean = numberBoxesProvisions >= OPTIMAL_NUMBER_BOXES_PROVISIONS
+
+    return (isShipNotDamaged && isOptimalCrewNumber && isOptimalNumberBoxesProvisions) ||
+            (isPerfectCrewNumber && isPerfectNumberBoxesProvisions && isWeatherGood)
 }
 
 fun main() {
